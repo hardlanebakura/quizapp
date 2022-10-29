@@ -1,0 +1,123 @@
+body {
+    background-image: url("/static/images/main_theme.jpg");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-attachment: fixed;       
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:100%;
+    width:100%;
+}
+
+#quiz {
+
+}
+
+.answer-row {
+    color: #fff;
+    margin-inline: 10%;
+    width: -webkit-fill-available;
+    text-align: center;
+    padding: 4px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.answer {
+    display: flex;
+    color: #fff;
+}
+
+.answer-content {
+    width: -webkit-fill-available;
+    display: flex;
+    font-weight: bold;
+}
+
+.answer-content__option {
+    width: 22%;
+    padding: 14px 0;
+    background: var(--db);
+    color: orange;
+}
+
+.answer-content__value {
+    width: 79%;
+    padding: 14px 0;
+    background: var(--db);
+    text-align: left;
+}
+
+#modal {
+    height: 129px;
+    width: 278px;
+    background-color: var(--db);
+    position: relative;
+    display: none;
+}
+
+#modal__btn-close {
+    padding: 14px;
+    background-color: red;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+}
+
+#modal__check {
+    padding: 4px 17px;
+    background: var(--db);
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+#modal__check__options {
+    margin-top: 14%;
+    display: flex;
+}
+
+#modal__check__option-1, #modal__check__option-2 {
+    padding: 4px 17px;
+    background: var(--db);
+    color: #fff;
+    border: 2px solid #fff;
+    margin-inline: 6px;
+}
+
+#modal__main__wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.answer {
+    cursor: pointer;
+}
+
+.wrapper-vertical {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical {
+    width: 100vh;
+}
+
+#new-game {
+    margin-bottom: 70px;
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    margin-inline: 10%;
+    width: -webkit-fill-available;
+    text-align: center;
+    padding: 4px 0;
+    justify-content: center;
+}

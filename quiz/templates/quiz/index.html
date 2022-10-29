@@ -1,0 +1,17 @@
+{% extends 'quiz/base.html' %}
+
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block body%}
+    <div id="new-game" class="wrapper">
+        <div id="question">
+            <div class="arrow-left"></div>
+            <div id="question-value">Start new game</div>
+            <div class="arrow-right"></div>
+        </div>
+    </div>
+    <script src = "{% static 'js/index.js' %}"></script>
+{% endblock %}

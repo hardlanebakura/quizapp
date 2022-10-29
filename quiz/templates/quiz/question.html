@@ -1,0 +1,84 @@
+{% extends 'quiz/base.html' %}
+
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/question.css' %}">
+    <script>
+        var question = {{ question_json|safe }}
+        var answers = {{ answers_json|safe }}
+        var round = {{ round }}
+    </script>
+{% endblock %}
+
+{% block body%}
+
+    <div class="wrapper-vertical">
+        <div class="vertical">
+
+            <div id="new-game" class="wrapper">
+                <div class="arrow-left"></div>
+                <div id="question-value">Start new game</div>
+                <div class="arrow-right"></div>
+            </div>
+
+            <div class="wrapper">
+                <div id="modal">
+                    <div id="modal__btn-close">
+                        X
+                    </div>
+                    <div id="modal__main__wrapper">
+                        <div id="modal__main">
+                            <div id="modal__check">
+                                Are you sure?
+                            </div>
+                            <div id="modal__check__options" class = "wrapper">
+                                <button id="modal__check__option-1">
+                                    Yes
+                                </button>
+                                <button id="modal__check__option-2">
+                                    No
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            {% load math_operations %}
+            <div id="quiz">
+                <div class="wrapper">
+                    <div id="question">
+                        <div class="arrow-left"></div>
+                        <div id="question-value">{{ question.text }}   </div>
+                        <div class="arrow-right"></div>
+                    </div>
+                </div>
+            
+                {% with ''|center:2 as rows %}
+                    {% for i in rows %}
+                        <div class="answer-row">
+                            {% with j=forloop.counter|add:"-1" %}
+                                {% with ''|center:2 as elements %}
+                                    {% for k in elements %}
+                                        {% with l=j|mult:2|add:forloop.counter|add:"-1" %}
+                                            <div class="answer">
+                                                <div class="arrow-left"></div>
+                                                <div class="answer-content">
+                                                    <div class="answer-content__option">{{ options|lst:l }}</div>
+                                                    <div class="answer-content__value">{{ answers|lst:l }}</div>
+                                                </div>
+                                                <div class="arrow-right"></div>
+                                            </div>
+                                        {% endwith %}
+                                    {% endfor %}
+                                {% endwith %}
+                            {% endwith %}
+                        </div>
+                    {% endfor %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+
+    <script src = "{%  static 'js/question.js' %}"></script>
+{% endblock %}

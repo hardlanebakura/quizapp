@@ -1,0 +1,42 @@
+{% extends 'quiz/base.html' %}
+
+{% block head %}
+    {% load static %}
+    <link rel = "stylesheet" href = "{% static 'css/money.css' %}">
+{% endblock %}
+
+{% block body %}
+    {% load math_operations %}
+
+    <div id="money-rows">
+        <div class="won">You won £</div>
+        {% for i in 14|negrange:-1 %}
+            {% if i|add:1|int == answers|int %}
+                <div id="current-sum">
+                    <div class="arrow-left"></div>
+                    <div class="sum">
+                        <div class="question-number">{{ i|add:1|int }}</div>
+                        <div class="money-sum">
+                            {% if answers|int > i|int %}
+                                <span>·</span>
+                            {% endif %}
+                            £{{ prizes|lst:i }}
+                        </div>
+                    </div>
+                    <div class="arrow-right"></div>
+                </div>
+            {% else %}
+                <div class="money-row">
+                    <div class="question-number">{{ i|add:1|int }}</div>
+                    <div class="money-sum">
+                        {% if answers|int > i|int %}
+                            <span>·</span>
+                        {% endif %}
+                        £{{ prizes|lst:i }}
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <script src = "{% static 'js/money.js' %}"></script>
+{% endblock %}

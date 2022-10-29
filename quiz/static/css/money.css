@@ -1,0 +1,62 @@
+body {
+    background-image: linear-gradient(to right, #000, #0000d5);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#money-rows {
+    color: #fff;
+}
+
+.money-row {
+    padding: 9px 14px;
+    margin-left: 41px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffa500;
+    display: flex;
+}
+
+.question-number {
+    padding-right: 10px;
+}
+
+#current-sum {
+    color: #000;
+    display: flex;
+}
+
+.arrow-left {
+    border-right-color: #ffa500;
+    border-right-width: 40px;
+}
+
+.arrow-right {
+    border-left-color: #ffa500;
+    border-left-width: 40px;
+}
+
+#current-sum .sum {
+    background-color: #ffa500;
+    padding: 9px 14px;
+    font-size: 26px;
+    font-weight: bold;
+    display: flex; 
+    align-items: center;  
+}
+
+#current-sum .question-number {
+    color: #000;
+    background-color: #ffa500;
+}
+
+.won {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+
+

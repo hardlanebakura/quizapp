@@ -1,0 +1,33 @@
+body {
+    background-image: url("/static/images/main_theme.jpg");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-attachment: fixed;       
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:100%;
+    width:100%;
+}
+
+#new-game {
+    height: 100vh;
+    align-items: center;
+}
+
+#start-new {
+    background-color: var(--db);
+    color: #fff;
+}
+
+#question {
+    width: 78%;
+}
+
+.arrow-left, #question-value, .arrow-right {
+    cursor: pointer;
+}
+
+
+
