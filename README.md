@@ -1,4 +1,4 @@
-### This is a quiz application in Django and PHP
+## This is a quiz application in Django and PHP
 
-## Enjoy your browsing!
+### Enjoy your browsing!
 
